@@ -1,5 +1,6 @@
 import 'package:example/pages/buttons.dart';
 import 'package:example/pages/colors_page.dart';
+import 'package:example/pages/context_menu_page.dart';
 import 'package:example/pages/dialogs_page.dart';
 import 'package:example/pages/fields.dart';
 import 'package:example/pages/indicators.dart';
@@ -49,6 +50,7 @@ class _DemoState extends State<Demo> {
   int pageIndex = 0;
 
   final List<Widget> pages = [
+    ContextMenuPage(),
     CupertinoTabView(
       builder: (_) => ButtonsPage(),
     ),
@@ -124,6 +126,10 @@ class _DemoState extends State<Demo> {
               SidebarItem(
                 leading: Icon(CupertinoIcons.rectangle),
                 label: Text('Dialogs'),
+              ),
+              SidebarItem(
+                leading: Icon(CupertinoIcons.rectangle),
+                label: Text('Context Menu'),
               ),
             ],
           );
